@@ -58,31 +58,6 @@ k8s-deployment-reporter/
 - Access to a Kubernetes cluster via `kubeconfig` or in-cluster config
 - RBAC: `list` on `namespaces` (ClusterRole) and `list` on `deployments` per namespace
 
----
-
-## Installation
-
-### Option A — run directly (no install)
-
-```bash
-git clone https://github.com/<your-username>/k8s-deployment-reporter.git
-cd k8s-deployment-reporter
-pip install -r requirements.txt
-python -m k8s_reporter.cli
-```
-
-### Option B — install as a package (gets you the `k8s-reporter` command)
-
-```bash
-pip install .
-k8s-reporter
-```
-
-### Option C — editable install for development
-
-```bash
-pip install -e ".[dev]"
-```
 
 ---
 
@@ -210,17 +185,3 @@ The test suite covers CPU/memory parsing and aggregation logic; **no cluster con
 ```
 
 ---
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/my-improvement`
-3. Make your changes and add tests
-4. Run the test suite: `pytest`
-5. Open a pull request
-
----
-
-## License
-
-MIT — see [LICENSE](LICENSE) for details.
